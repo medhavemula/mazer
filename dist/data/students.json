@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "total_students": 120,
+    "average_score": 74,
+    "top_performers": 18,
+    "attendance_rate": "88%"
+  },
+  "students": [
+    { "id": 1, "name": "Aisha Khan",    "subject": "Mathematics",      "score": 92, "attendance": "95%", "grade": "A",  "status": "Excellent" },
+    { "id": 2, "name": "Ravi Sharma",   "subject": "Science",          "score": 78, "attendance": "88%", "grade": "B",  "status": "Good" },
+    { "id": 3, "name": "Priya Patel",   "subject": "English",          "score": 65, "attendance": "79%", "grade": "C",  "status": "Average" },
+    { "id": 4, "name": "Arjun Mehta",   "subject": "History",          "score": 88, "attendance": "92%", "grade": "A",  "status": "Excellent" },
+    { "id": 5, "name": "Sneha Reddy",   "subject": "Computer Science", "score": 95, "attendance": "97%", "grade": "A+", "status": "Excellent" },
+    { "id": 6, "name": "Mohit Verma",   "subject": "Mathematics",      "score": 55, "attendance": "70%", "grade": "D",  "status": "Needs Improvement" },
+    { "id": 7, "name": "Divya Nair",    "subject": "Science",          "score": 81, "attendance": "85%", "grade": "B",  "status": "Good" },
+    { "id": 8, "name": "Karan Singh",   "subject": "English",          "score": 70, "attendance": "80%", "grade": "B",  "status": "Good" }
+  ],
+  "monthly_scores": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "data": [65, 70, 68, 75, 80, 74]
+  }
+}
