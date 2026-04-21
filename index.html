@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Performance Dashboard</title>
+  <link rel="stylesheet" href="./assets/compiled/css/app.css" />
+  <link rel="stylesheet" href="./assets/compiled/css/app-dark.css" />
+  <link rel="stylesheet" href="./assets/compiled/css/iconly.css" />
+</head>
+<body>
+  <script src="assets/static/js/initTheme.js"></script>
+  <div id="app">
+    <div id="sidebar">
+      <div class="sidebar-wrapper active">
+        <div class="sidebar-header position-relative">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="logo"><a href="index.html"><b style="color:#435ebe;font-size:20px;">🎓 EduDash</b></a></div>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <ul class="menu">
+            <li class="sidebar-title">Main Menu</li>
+            <li class="sidebar-item active">
+              <a href="index.html" class="sidebar-link"><i class="bi bi-grid-fill"></i><span>Dashboard</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a href="table.html" class="sidebar-link"><i class="bi bi-people-fill"></i><span>All Students</span></a>
+            </li>
+            <li class="sidebar-item">
+              <a href="ui-chart-apexcharts.html" class="sidebar-link"><i class="bi bi-bar-chart-fill"></i><span>Reports</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <header class="mb-3">
+        <a href="#" class="burger-btn d-block d-xl-none"><i class="bi bi-justify fs-3"></i></a>
+      </header>
+
+      <div class="page-heading">
+        <h3>Student Performance Dashboard</h3>
+        <p class="text-muted">Track student scores, attendance and performance</p>
+      </div>
+
+      <div class="page-content">
+
+        <!-- STAT CARDS -->
+        <section class="row g-3 mb-4">
+          <div class="col-6 col-lg-3">
+            <div class="card"><div class="card-body px-4 py-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stats-icon purple"><i class="iconly-boldProfile"></i></div>
+                <div><p class="text-muted mb-0 small">Total Students</p><h4 class="mb-0" id="stat-total">...</h4></div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card"><div class="card-body px-4 py-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stats-icon blue"><i class="iconly-boldChart"></i></div>
+                <div><p class="text-muted mb-0 small">Average Score</p><h4 class="mb-0" id="stat-score">...</h4></div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card"><div class="card-body px-4 py-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stats-icon green"><i class="iconly-boldStar"></i></div>
+                <div><p class="text-muted mb-0 small">Top Performers</p><h4 class="mb-0" id="stat-top">...</h4></div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card"><div class="card-body px-4 py-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stats-icon red"><i class="iconly-boldCalendar"></i></div>
+                <div><p class="text-muted mb-0 small">Attendance Rate</p><h4 class="mb-0" id="stat-attend">...</h4></div>
+              </div>
+            </div></div>
+          </div>
+        </section>
+
+        <!-- CHART -->
+        <section class="row mb-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header"><h5 class="card-title mb-0">📈 Monthly Average Score Trend</h5></div>
+              <div class="card-body"><div id="scoreChart"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STUDENT TABLE -->
+        <section class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <h5 class="card-title mb-0">👨‍🎓 Student Records</h5>
+                <input type="text" id="searchInput" class="form-control w-auto"
+                       placeholder="Search students..." />
+              </div>
+              <div class="card-body">
+                <table class="table table-hover table-striped">
+                  <thead class="table-light">
+                    <tr><th>#</th><th>Name</th><th>Subject</th><th>Score</th><th>Attendance</th><th>Status</th></tr>
+                  </thead>
+                  <tbody id="student-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/extensions/apexcharts/apexcharts.min.js"></script>
+  <script src="./assets/compiled/js/app.js"></script>
+  <script src="./assets/static/js/dashboard-custom.js"></script>
+</body>
+</html>
